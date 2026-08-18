@@ -79,9 +79,34 @@ def main():
     if placeholder is None:
         print("  [inject_toc] no TOC placeholder found in", docx_path); return
 
-    # 5) build static TOC paragraphs, insert before placeholder, then delete it
+    # 5) build the TOC entries, insert before the placeholder, then delete it.
+    #
+    #    The entries are wrapped in a REAL Word `TOC \o "1-2" \h \z \u` field, with the
+    #    computed lines sitting in the field's result. LibreOffice cannot build a TOC
+    #    field headlessly, so the result is what every reader sees and prints — but
+    #    because it is a genuine field, Word still refreshes it on F9 rather than
+    #    leaving hard-coded text that silently goes stale after an edit.
     anchor = placeholder._p
     GREY = RGBColor(0x33, 0x33, 0x33)
+
+    def _fld(kind, instr=None):
+        p = anchor.makeelement(qn('w:p'), {}); anchor.addprevious(p)
+        r = p.makeelement(qn('w:r'), {}); p.append(r)
+        if instr is None:
+            fc = r.makeelement(qn('w:fldChar'), {}); fc.set(qn('w:fldCharType'), kind)
+            if kind == 'begin':
+                fc.set(qn('w:dirty'), 'true')
+            r.append(fc)
+        else:
+            it = r.makeelement(qn('w:instrText'), {})
+            it.set(qn('xml:space'), 'preserve'); it.text = instr
+            r.append(it)
+        return p
+
+    _fld('begin')
+    _fld(None, r' TOC \o "1-2" \h \z \u ')
+    _fld('separate')
+
     for lvl, text, page in entries:
         new_p = anchor.makeelement(qn('w:p'), {})
         anchor.addprevious(new_p)
@@ -97,6 +122,7 @@ def main():
         r.font.name = "Arial"
         r.bold = (lvl == 1)
         r.font.color.rgb = GREY
+    _fld('end')
     anchor.getparent().remove(anchor)
 
     doc.save(docx_path)
