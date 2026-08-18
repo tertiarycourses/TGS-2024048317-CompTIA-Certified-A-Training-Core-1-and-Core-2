@@ -296,6 +296,7 @@ prodoc.add_version_control(doc,[
   f"each in its own repository folder, using the browser-based lab toolkit (IP Calculator, PCAP Analyzer, "
   f"Cybersecurity Simulator, RegexLab) and the Killercoda Ubuntu playground. Added the A+ port reference, "
   f"the high-yield exam facts table and an expanded glossary.",C.TRAINER),
+ ("7.1",C.VERSION_DATE,"Aligned the Skills Framework section to the full competency set the assessment tests — K1–K6 (Written Assessment) and A1–A8 (Practical Performance) — so no learner is assessed on an outcome the courseware did not declare.",C.TRAINER),
 ])
 prodoc.add_toc(doc)
 

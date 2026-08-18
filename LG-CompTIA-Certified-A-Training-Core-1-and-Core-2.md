@@ -1,6 +1,6 @@
 # CompTIA Certified A+ Training (Core 1 and Core 2) — Learner Guide
 
-**WSQ Course Code:** TGS-2024048317  |  **Conducted by:** Tertiary Infotech Academy Pte Ltd (UEN 201200696W)  |  **Version v7.0 · 19 August 2026**
+**WSQ Course Code:** TGS-2024048317  |  **Conducted by:** Tertiary Infotech Academy Pte Ltd (UEN 201200696W)  |  **Version v7.1 · 19 August 2026**
 
 ## Contents
 
@@ -105,16 +105,19 @@ TSC Title: Infrastructure Support    TSC Code: ICT-OUS-3007-1.1
 - K2 Infrastructure and network configuration techniques
 - K3 Troubleshooting techniques for infrastructure technical issues and problems
 - K4 Potential benefits and impact of infrastructure upgrades and improvements
-- K5 Documentation and user-guide development practices for infrastructure systems
+- K5 Sources of information for the development of infrastructure user guides and documentation
+- K6 Types and purposes of system tests for infrastructure operating requirements
 
 **Abilities**
 
 - A1 Diagnose technical issues in network operations
 - A2 Implement procedures to resolve root causes of technical issues
-- A3 Perform advanced infrastructure configurations
-- A4 Develop action plans for infrastructure upgrades
-- A5 Test infrastructure systems against operating requirements
-- A6 Organise information for the development of user guides
+- A3 Troubleshoot technical issues in infrastructure systems
+- A4 Perform advanced infrastructure configurations
+- A5 Develop action plans for infrastructure upgrades
+- A6 Propose infrastructure improvement ideas based on user needs
+- A7 Test infrastructure systems against operating requirements
+- A8 Organise information for the development of user guides
 
 
 ## CompTIA A+ Exam Domains and Weightings

@@ -1,6 +1,6 @@
 # Hands-On Labs — CompTIA Certified A+ Training (Core 1 and Core 2)
 
-> **Course code:** TGS-2024048317  ·  **Version v7.0** · 19 August 2026  
+> **Course code:** TGS-2024048317  ·  **Version v7.1** · 19 August 2026  
 > **Register:** https://www.tertiarycourses.com.sg/wsq-comptia-certified-a-training-core-1-and-core-2.html
 
 54 hands-on labs across the nine CompTIA A+ exam domains. **Each lab has its own folder** containing the full procedure (`README.md`) and a fill-in worksheet (`worksheet.md`).

@@ -16,7 +16,7 @@ are prepared for both the WSQ assessment and the A+ certification exams.
 TITLE        = "CompTIA Certified A+ Training (Core 1 and Core 2)"
 SHORT_TITLE  = "CompTIA-Certified-A-Training-Core-1-and-Core-2"
 COURSE_CODE  = "TGS-2024048317"
-VERSION      = "v7.0"
+VERSION      = "v7.1"
 VERSION_DATE = "19 August 2026"
 ORG          = "Tertiary Infotech Academy Pte Ltd"
 UEN          = "UEN: 201200696W"
@@ -29,20 +29,27 @@ REPO_URL     = "https://github.com/tertiarycourses/TGS-2024048317-CompTIA-Certif
 # ------------------------------------------------------------------ skills framework
 TSC_TITLE = "Infrastructure Support"
 TSC_CODE  = "ICT-OUS-3007-1.1"
+# The K and A sets MUST match the codes the assessment actually tests: the WA covers
+# K1–K6 and the PP covers A1–A8, mirroring the original TMS papers. Declaring a
+# shorter set here would mean assessing learners on outcomes the courseware never
+# stated — so these lists are the single source for the deck, the LP and the LG.
 TSC_KNOWLEDGE = [
     "K1 Diagnostic tools and processes to identify technical issues or disruptions in network infrastructure",
     "K2 Infrastructure and network configuration techniques",
     "K3 Troubleshooting techniques for infrastructure technical issues and problems",
     "K4 Potential benefits and impact of infrastructure upgrades and improvements",
-    "K5 Documentation and user-guide development practices for infrastructure systems",
+    "K5 Sources of information for the development of infrastructure user guides and documentation",
+    "K6 Types and purposes of system tests for infrastructure operating requirements",
 ]
 TSC_ABILITIES = [
     "A1 Diagnose technical issues in network operations",
     "A2 Implement procedures to resolve root causes of technical issues",
-    "A3 Perform advanced infrastructure configurations",
-    "A4 Develop action plans for infrastructure upgrades",
-    "A5 Test infrastructure systems against operating requirements",
-    "A6 Organise information for the development of user guides",
+    "A3 Troubleshoot technical issues in infrastructure systems",
+    "A4 Perform advanced infrastructure configurations",
+    "A5 Develop action plans for infrastructure upgrades",
+    "A6 Propose infrastructure improvement ideas based on user needs",
+    "A7 Test infrastructure systems against operating requirements",
+    "A8 Organise information for the development of user guides",
 ]
 
 # ------------------------------------------------------------------ outcomes

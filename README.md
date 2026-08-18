@@ -36,7 +36,7 @@ Aligned to the Skills Framework TSC **Infrastructure Support (ICT-OUS-3007-1.1)*
 
 | Artifact | Format | Description |
 | --- | --- | --- |
-| [Trainer Slides](courseware/CompTIA-Certified-A-Training-Core-1-and-Core-2-v7.0.pptx) | PPTX · [PDF](courseware/CompTIA-Certified-A-Training-Core-1-and-Core-2-v7.0.pdf) | 268-slide visual deck — concepts, process maps and verification criteria. |
+| [Trainer Slides](courseware/CompTIA-Certified-A-Training-Core-1-and-Core-2-v7.1.pptx) | PPTX · [PDF](courseware/CompTIA-Certified-A-Training-Core-1-and-Core-2-v7.1.pdf) | 269-slide visual deck — concepts, process maps and verification criteria. |
 | [Learner Guide](courseware/LG-CompTIA-Certified-A-Training-Core-1-and-Core-2.docx) | DOCX · [PDF](courseware/LG-CompTIA-Certified-A-Training-Core-1-and-Core-2.pdf) · [Markdown](LG-CompTIA-Certified-A-Training-Core-1-and-Core-2.md) | Full step-by-step procedure for all 54 labs, plus the A+ port reference and glossary. |
 | [Lesson Plan](courseware/LP-CompTIA-Certified-A-Training-Core-1-and-Core-2.docx) | DOCX · [PDF](courseware/LP-CompTIA-Certified-A-Training-Core-1-and-Core-2.pdf) | 5-day schedule, 8 instructional hours per day, mapped to every lab. |
 | [Labs Index](labs/README.md) | Markdown | All 54 labs — **each in its own folder** with a README and a worksheet. |

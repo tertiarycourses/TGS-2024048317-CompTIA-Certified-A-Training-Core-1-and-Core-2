@@ -689,14 +689,15 @@ tile_grid("Download Your Course Material",[
  ("5 · Get the labs","Open the lab repository on GitHub — the link is on your course page."),
  ("6 · Keep them open","You may use these materials during the open-book assessment.")],
  kicker="LMS / TMS  ·  lms-tms.tertiaryinfotech.com",cols=2,size=14)
-tile_grid("Skills Framework Alignment",[
- ("TSC Title", C.TSC_TITLE),
- ("TSC Code", C.TSC_CODE),
- ("K1 / K2", "Diagnostic tools and processes for network infrastructure; infrastructure and network configuration techniques."),
- ("K3 / K4", "Troubleshooting techniques for infrastructure problems; benefits and impact of infrastructure upgrades."),
- ("A1 / A2", "Diagnose technical issues in network operations; implement procedures to resolve root causes."),
- ("A3 / A5", "Perform advanced infrastructure configurations; test infrastructure systems against operating requirements.")],
- kicker="SKILLS FRAMEWORK  ·  TSC",cols=2,size=14,accent=VIOLET)
+# Driven from course_data so the deck can never declare a shorter K/A set than the
+# assessment tests. K1–K6 are assessed by the WA; A1–A8 by the PP.
+tile_grid("Skills Framework Alignment",
+ [("TSC Title", C.TSC_TITLE), ("TSC Code", C.TSC_CODE)] +
+ [(k.split(" ",1)[0], k.split(" ",1)[1]) for k in C.TSC_KNOWLEDGE],
+ kicker="SKILLS FRAMEWORK  ·  KNOWLEDGE (ASSESSED BY THE WA)",cols=2,size=12,accent=VIOLET)
+tile_grid("Skills Framework Alignment — Abilities",
+ [(a.split(" ",1)[0], a.split(" ",1)[1]) for a in C.TSC_ABILITIES],
+ kicker="SKILLS FRAMEWORK  ·  ABILITIES (ASSESSED BY THE PP)",cols=2,size=13,accent=VIOLET)
 tile_grid("Learning Outcomes",[
  ("LO1 · Diagnose and resolve","Diagnose technical issues in network operations and implement procedures to resolve root causes."),
  ("LO2 · Troubleshoot and configure","Troubleshoot technical issues and perform advanced infrastructure configurations."),

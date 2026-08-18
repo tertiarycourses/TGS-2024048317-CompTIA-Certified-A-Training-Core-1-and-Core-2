@@ -114,6 +114,7 @@ prodoc.add_version_control(doc,[
   f"Major revision — rebuilt against the current CompTIA A+ Core 1 (220-1101) and Core 2 (220-1102) exam domain weightings. "
   f"Schedule now covers {len(ACT)} hands-on labs across the five days, using the browser-based lab toolkit "
   f"(IP Calculator, PCAP Analyzer, Cybersecurity Simulator, RegexLab) and the Killercoda Ubuntu playground.",C.TRAINER),
+ ("7.1",C.VERSION_DATE,"Aligned the Skills Framework section to the full competency set the assessment tests — K1–K6 (Written Assessment) and A1–A8 (Practical Performance) — so no learner is assessed on an outcome the courseware did not declare.",C.TRAINER),
 ])
 prodoc.add_toc(doc)
 
