@@ -1,0 +1,20 @@
+# ── CONFIDENTIAL — never publish ────────────────────────────────────────────
+# Assessment papers and answer keys are Google Drive / LMS only.
+assessment/
+# The assessment builder carries the LIVE questions and model answers inline.
+.claude/skills/wsq-assessment/build_assessment.py
+.claude/skills/wsq-assessment/build_wsq_assessment.py
+# Original papers exported from the TMS.
+reference/tms/
+
+# ── Build and OS noise ──────────────────────────────────────────────────────
+__pycache__/
+*.pyc
+.DS_Store
+**/.DS_Store
+*.tmp
+~$*
+.playwright-mcp/
+
+# ── Local machine state ─────────────────────────────────────────────────────
+.claude/settings.local.json
