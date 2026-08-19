@@ -64,10 +64,14 @@ blockquote { margin: 6pt 0; padding: 6pt 10pt; background: #F5F8FC;
 blockquote p { margin: 0 0 3pt 0; }
 code { font-family: "Courier New", monospace; font-size: 9.5pt;
        background: #F5F8FC; padding: 1pt 3pt; }
-pre { font-family: "Courier New", monospace; font-size: 9pt; background: #0B1220;
-      color: #9CDCFE; padding: 8pt 10pt; margin: 4pt 0 8pt 0;
+/* These are printed handouts: light-on-dark code looks good on screen but prints
+   as a heavy ink block with poor contrast, and photocopies worse. Use dark text on
+   a light panel with a rule down the side. */
+pre { font-family: "Courier New", monospace; font-size: 9.5pt; background: #F2F6FB;
+      color: #0B3060; padding: 7pt 9pt; margin: 4pt 0 9pt 0;
+      border-left: 3px solid #1F6FEB;
       white-space: pre-wrap; word-wrap: break-word; }
-pre code { background: transparent; color: inherit; padding: 0; font-size: 9pt; }
+pre code { background: transparent; color: inherit; padding: 0; font-size: 9.5pt; }
 table { border-collapse: collapse; width: 100%; margin: 4pt 0 10pt 0; font-size: 10pt; }
 th { background: #1F6FEB; color: #FFFFFF; text-align: left; padding: 5pt 6pt;
      border: 1px solid #C9D4E3; font-size: 9.5pt; }
@@ -94,8 +98,20 @@ li.check:before { content: ""; display: inline-block; width: 9pt; height: 9pt;
 """
 
 
+# Usable text width on A4 with 16mm side margins, in CSS px at 96dpi.
+CONTENT_PX = 672
+
+
 def inline_images(html, base_dir):
-    """Embed <img src="..."> as data URIs — a relative path would render blank."""
+    """Embed <img src="..."> as data URIs and cap the rendered width.
+
+    Two separate traps:
+      - a relative path resolves against the temp render directory, not the repo,
+        so the image comes out blank;
+      - LibreOffice lays a bare <img> out at its NATIVE pixel size and ignores
+        `max-width: 100%`, so a 1440px screenshot runs off the right margin. The
+        width has to be an explicit attribute.
+    """
     def repl(m):
         pre, src, post = m.group(1), m.group(2), m.group(3)
         if src.startswith(("http://", "https://", "data:")):
@@ -105,8 +121,19 @@ def inline_images(html, base_dir):
             return m.group(0)
         mime = mimetypes.guess_type(path)[0] or "image/png"
         with open(path, "rb") as f:
-            b64 = base64.b64encode(f.read()).decode("ascii")
-        return f'{pre}data:{mime};base64,{b64}{post}'
+            raw = f.read()
+        b64 = base64.b64encode(raw).decode("ascii")
+        tag = f'{pre}data:{mime};base64,{b64}{post}'
+        try:
+            from PIL import Image
+            import io
+            w, h = Image.open(io.BytesIO(raw)).size
+            if w > CONTENT_PX:
+                scale = CONTENT_PX / w
+                tag += f' width="{CONTENT_PX}" height="{int(h * scale)}"'
+        except Exception:
+            tag += f' width="{CONTENT_PX}"'
+        return tag
     return re.sub(r'(<img[^>]*\ssrc=")([^"]+)(")', repl, html)
 
 
@@ -115,6 +142,21 @@ def md_to_html(md_path):
         text = f.read()
     # The PDF is a standalone handout: links back to sibling .md files are noise.
     text = re.sub(r"\[([^\]]+)\]\((?:\.\./)*[^)]*\.md(?:#[^)]*)?\)", r"\1", text)
+
+    # Lab commands sit in fences indented inside a numbered step. python-markdown's
+    # fenced_code does not recognise an indented fence, so the block renders as plain
+    # text with a literal "bash" line in front of it. Convert each indented fence to
+    # an explicit <pre> before the Markdown pass, preserving the command exactly.
+    def _indented_fence(m):
+        indent = m.group("ind")
+        lines = [l[len(indent):] if l.startswith(indent) else l.strip()
+                 for l in m.group("body").split("\n")]
+        body = ("\n".join(lines).rstrip()
+                .replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;"))
+        return f"\n<pre><code>{body}</code></pre>\n"
+
+    text = re.sub(r"\n(?P<ind>[ \t]+)```[a-zA-Z]*\n(?P<body>.*?)\n(?P=ind)?```",
+                  _indented_fence, text, flags=re.S)
     body = markdown.markdown(
         text, extensions=["tables", "fenced_code", "sane_lists", "attr_list"])
     body = inline_images(body, os.path.dirname(md_path))

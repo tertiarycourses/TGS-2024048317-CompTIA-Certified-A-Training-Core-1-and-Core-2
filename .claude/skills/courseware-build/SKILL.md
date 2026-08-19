@@ -23,10 +23,34 @@ titles, lab numbering, learning outcomes, the schedule and the assessment can ne
     build_slides.py       generic engine → courseware/<TITLE>-<VER>.pptx  (all-white house style)
     build_lesson_plan.py  generic engine → courseware/LP-<TITLE>.docx
     build_learner_guide.py generic engine → LG-<TITLE>.md (repo root) + courseware/LG-<TITLE>.docx
+    build_labs.py         labs/ tree — ONE FOLDER PER LAB (README.md + worksheet.md) + index + tools
+    build_lab_pdfs.py     print-ready PDF beside every lab .md (Markdown → styled HTML → LibreOffice)
+    build_tool_figures.py drawn fallback figures for tools that cannot be screenshotted headlessly
     prodoc.py             shared DOCX helpers (cover page, version-control record, TOC, page numbers)
     inject_toc.py         page-numbered TOC injector (LibreOffice can't update TOC fields headless)
     build_courseware.sh   orchestrator: generate → render PDF → inject TOC → re-render
 ```
+
+## Lab PDFs — four LibreOffice HTML-import traps
+
+`build_lab_pdfs.py` renders each lab `.md` to a PDF handout. LibreOffice's HTML
+import ignores several things a browser honours, and each one fails *silently* —
+the PDF is produced, it is just wrong:
+
+| Symptom | Cause | Fix used |
+|---|---|---|
+| Image blank | relative `<img src>` resolves against the temp render dir, not the repo | inline as a `data:` URI |
+| Image runs off the right margin | a bare `<img>` is laid out at NATIVE pixel size; `max-width:100%` is ignored | explicit `width`/`height` attributes, capped to the content width |
+| Table column squashed to a sliver | `table-layout: fixed` and cell `height` are ignored | `<col width>` attributes on the table |
+| A literal `bash` line above each command | the fence is indented inside a numbered step, which `fenced_code` does not parse | convert indented fences to `<pre>` before the Markdown pass |
+
+Code blocks are **dark text on a light panel**, not light-on-dark: these are printed
+and photocopied, and an inverted block prints as a heavy, low-contrast slab.
+
+The worksheet's evidence table is written on by hand, so its observation column is
+the widest and each row carries a spacer to give vertical room. Keep worksheet step
+text FULL — a truncated step ("Verify the /26 result by hand: 32…") is useless to a
+learner filling the sheet in away from the lab README.
 
 ## How the pipeline stays generic (won't break when moved / installed elsewhere)
 
@@ -46,6 +70,11 @@ bash .claude/skills/courseware-build/build/build_courseware.sh
 python3 .claude/skills/courseware-build/build/build_slides.py
 python3 .claude/skills/courseware-build/build/build_lesson_plan.py
 python3 .claude/skills/courseware-build/build/build_learner_guide.py
+
+# the labs tree, then a print-ready PDF beside every lab .md
+python3 .claude/skills/courseware-build/build/build_labs.py
+python3 .claude/skills/courseware-build/build/build_lab_pdfs.py          # only what changed
+python3 .claude/skills/courseware-build/build/build_lab_pdfs.py --force  # reconvert all
 ```
 
 Assessments (WA SAQ + PP) are built by the sibling **wsq-assessment** skill from the same course
