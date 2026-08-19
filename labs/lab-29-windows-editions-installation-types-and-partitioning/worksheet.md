@@ -8,18 +8,18 @@
 
 | Step | What you did | What you observed |
 | --- | --- | --- |
-| 1 | Build the edition matrix with rows for Home, Pro, Pro for Workstati... |  |
-| 2 | Record the decisive difference: Home cannot join a domain and has n... |  |
-| 3 | Compare the installation types — clean install, in-place upgrade, n... |  |
-| 4 | Record the valid upgrade paths: Windows 7 and 8.1 upgrade in place ... |  |
-| 5 | Record the Windows 11 hardware requirements that block many upgrade... |  |
-| 6 | Record the pre-upgrade checklist: back up files and preferences, ve... |  |
-| 7 | Compare MBR and GPT on maximum disk size, partition count and firmw... |  |
-| 8 | Confirm your own machine's firmware mode and Secure Boot state, sin... |  |
-| 9 | Open Disk Management and record each disk's partition style, its vo... |  |
-| 10 | Inspect the same information from the command line, which is what y... |  |
-| 11 | Distinguish primary, extended and logical partitions under MBR, and... |  |
-| 12 | Compare a full format, which checks every sector for bad sectors, a... |  |
+| 1 | Build the edition matrix with rows for Home, Pro, Pro for Workstations and Enterprise, and columns for domain join, BitLocker, Group Policy, Remote Desktop host and maximum RAM. |  |
+| 2 | Record the decisive difference: Home cannot join a domain and has no BitLocker or Group Policy, which rules it out for almost every business deployment. |  |
+| 3 | Compare the installation types — clean install, in-place upgrade, network deployment and cloning — on what each preserves, what it requires and how long it takes per machine. |  |
+| 4 | Record the valid upgrade paths: Windows 7 and 8.1 upgrade in place to Windows 10, and Windows 10 upgrades in place to Windows 11 where the hardware requirements are met. |  |
+| 5 | Record the Windows 11 hardware requirements that block many upgrades: TPM 2.0, UEFI with Secure Boot, a 64-bit supported processor, 4 GB RAM and 64 GB storage. |  |
+| 6 | Record the pre-upgrade checklist: back up files and preferences, verify application and driver compatibility, verify hardware compatibility, and confirm the rollback window. |  |
+| 7 | Compare MBR and GPT on maximum disk size, partition count and firmware requirement, and record that UEFI Secure Boot requires GPT while legacy BIOS uses MBR. |  |
+| 8 | Confirm your own machine's firmware mode and Secure Boot state, since this determines which partition scheme is valid. |  |
+| 9 | Open Disk Management and record each disk's partition style, its volumes, their file systems and their free space. |  |
+| 10 | Inspect the same information from the command line, which is what you use when Windows will not boot into the GUI. |  |
+| 11 | Distinguish primary, extended and logical partitions under MBR, and record why the four-primary limit forces an extended partition when more volumes are needed. |  |
+| 12 | Compare a full format, which checks every sector for bad sectors, against a quick format, which only rewrites the file system table, and state when each is appropriate. |  |
 
 ## Verification
 

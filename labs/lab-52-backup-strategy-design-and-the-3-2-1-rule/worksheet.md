@@ -8,18 +8,18 @@
 
 | Step | What you did | What you observed |
 | --- | --- | --- |
-| 1 | Record the two objectives that drive every backup design: the recov... |  |
-| 2 | Record the scenario objectives: a small business with a 24-hour RPO... |  |
-| 3 | Record the 3-2-1 rule and what each element defeats: three copies d... |  |
-| 4 | Compare full, incremental and differential backups on backup time, ... |  |
-| 5 | Work the restore arithmetic for an incremental scheme: a Sunday ful... |  |
-| 6 | Work the same arithmetic for a differential scheme: a Sunday full p... |  |
-| 7 | Choose between them against the 4-hour RTO, and justify the choice ... |  |
-| 8 | Record the rotation schemes: grandfather-father-son with daily, wee... |  |
-| 9 | Define the retention policy: how long daily, weekly, monthly and ye... |  |
-| 10 | Specify the off-site copy: where it goes, how it gets there, how of... |  |
-| 11 | Record the ransomware requirement: at least one copy must be offlin... |  |
-| 12 | Define the backup testing schedule, specifying how often a restore ... |  |
+| 1 | Record the two objectives that drive every backup design: the recovery point objective, which is how much data the business can afford to lose, and the recovery time objective, which is how long it can afford to be down. |  |
+| 2 | Record the scenario objectives: a small business with a 24-hour RPO and a 4-hour RTO for its file server. |  |
+| 3 | Record the 3-2-1 rule and what each element defeats: three copies defeat corruption, two different media defeat media failure, and one off-site copy defeats fire, flood and theft. |  |
+| 4 | Compare full, incremental and differential backups on backup time, storage consumed, restore complexity and archive bit behaviour. |  |
+| 5 | Work the restore arithmetic for an incremental scheme: a Sunday full plus daily incrementals means restoring Thursday requires the full plus Monday, Tuesday, Wednesday and Thursday — five operations. |  |
+| 6 | Work the same arithmetic for a differential scheme: a Sunday full plus daily differentials means restoring Thursday requires only the full plus Thursday — two operations. |  |
+| 7 | Choose between them against the 4-hour RTO, and justify the choice on restore time rather than on backup window alone. |  |
+| 8 | Record the rotation schemes: grandfather-father-son with daily, weekly and monthly sets, and the tower of Hanoi scheme, and state what each provides. |  |
+| 9 | Define the retention policy: how long daily, weekly, monthly and yearly copies are kept, and note that retention may be set by regulation rather than by preference. |  |
+| 10 | Specify the off-site copy: where it goes, how it gets there, how often, and whether it is encrypted in transit and at rest. |  |
+| 11 | Record the ransomware requirement: at least one copy must be offline, air-gapped or immutable, because ransomware encrypts every backup it can reach over the network. |  |
+| 12 | Define the backup testing schedule, specifying how often a restore is actually performed and who signs off that it succeeded. |  |
 
 ## Verification
 

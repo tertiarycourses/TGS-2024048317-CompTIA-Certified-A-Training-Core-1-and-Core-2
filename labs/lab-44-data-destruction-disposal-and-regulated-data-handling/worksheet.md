@@ -8,18 +8,18 @@
 
 | Step | What you did | What you observed |
 | --- | --- | --- |
-| 1 | Separate the two destruction goals: physical destruction where the ... |  |
-| 2 | Record the physical destruction methods: drilling through the platt... |  |
-| 3 | Record the critical exception: degaussing does not work on solid st... |  |
-| 4 | Record the sanitisation methods for reuse: a standard format which ... |  |
-| 5 | Record why a standard format is not destruction: it removes the ind... |  |
-| 6 | Record cryptographic erase for self-encrypting drives: destroying t... |  |
-| 7 | Build the decision table matching data sensitivity to method: publi... |  |
-| 8 | Record the outsourcing requirements: use a certified vendor, obtain... |  |
-| 9 | Build the regulated data reference: personally identifiable informa... |  |
-| 10 | For each regulation record what data it covers, the core obligation... |  |
-| 11 | Record the chain of custody: the chronological documentation of who... |  |
-| 12 | Complete a chain-of-custody form for a hypothetical drive removed f... |  |
+| 1 | Separate the two destruction goals: physical destruction where the media will never be reused, and sanitisation where the media is to be reused or resold. |  |
+| 2 | Record the physical destruction methods: drilling through the platters, shredding into small fragments, degaussing with a strong magnetic field, and incineration. |  |
+| 3 | Record the critical exception: degaussing does not work on solid state drives, because SSDs store data in flash cells rather than magnetically. Shredding or cryptographic erase is required instead. |  |
+| 4 | Record the sanitisation methods for reuse: a standard format which only clears the file table, a low-level format, and a multi-pass overwrite wipe which is the only reliable software method on a hard disk. |  |
+| 5 | Record why a standard format is not destruction: it removes the index but leaves the data recoverable with freely available tools. |  |
+| 6 | Record cryptographic erase for self-encrypting drives: destroying the encryption key renders all data unrecoverable instantly, which is the fastest correct method for an SED or an encrypted SSD. |  |
+| 7 | Build the decision table matching data sensitivity to method: public data may simply be deleted, internal data must be wiped, confidential data must be wiped and verified, and regulated data must be physically destroyed with a certificate. |  |
+| 8 | Record the outsourcing requirements: use a certified vendor, obtain a certificate of destruction listing serial numbers, and retain that certificate for the audit period. |  |
+| 9 | Build the regulated data reference: personally identifiable information, PCI DSS for payment card data, GDPR for EU personal data, PHI under HIPAA for health data, and Singapore's PDPA. |  |
+| 10 | For each regulation record what data it covers, the core obligation it imposes and the consequence of a breach. |  |
+| 11 | Record the chain of custody: the chronological documentation of who held evidence, when, and what they did with it, and note that a gap in the chain can render evidence inadmissible. |  |
+| 12 | Complete a chain-of-custody form for a hypothetical drive removed from a compromised machine, recording every handover with date, time, person and purpose. |  |
 
 ## Verification
 

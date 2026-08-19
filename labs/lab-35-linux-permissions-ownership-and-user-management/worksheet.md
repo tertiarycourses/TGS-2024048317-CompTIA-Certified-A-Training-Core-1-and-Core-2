@@ -8,18 +8,18 @@
 
 | Step | What you did | What you observed |
 | --- | --- | --- |
-| 1 | Open the Killercoda playground and examine a file's permission stri... |  |
-| 2 | Record the notation: r equals 4, w equals 2, x equals 1, so rwx is ... |  |
-| 3 | Build the conversion table for the modes you will actually see: 777... |  |
-| 4 | Set permissions numerically and verify the symbolic result matches ... |  |
-| 5 | Set permissions symbolically and confirm it produces the same resul... |  |
-| 6 | Record why directories need the execute bit: without x on a directo... |  |
+| 1 | Open the Killercoda playground and examine a file's permission string, identifying the three permission triplets for owner, group and others. |  |
+| 2 | Record the notation: r equals 4, w equals 2, x equals 1, so rwx is 7, rw- is 6, r-x is 5 and r-- is 4. |  |
+| 3 | Build the conversion table for the modes you will actually see: 777, 755, 750, 700, 644, 640 and 600, giving the symbolic form and the typical use of each. |  |
+| 4 | Set permissions numerically and verify the symbolic result matches your table. |  |
+| 5 | Set permissions symbolically and confirm it produces the same result as the numeric form. |  |
+| 6 | Record why directories need the execute bit: without x on a directory you cannot enter it or access anything inside, even with read permission. |  |
 | 7 | Create two users to demonstrate real access control between accounts. |  |
 | 8 | Create a shared group and add both users to it. |  |
-| 9 | Create a shared directory owned by the group with permissions that ... |  |
-| 10 | Set the setgid bit so that files created inside inherit the group, ... |  |
-| 11 | Verify the access control works: alice can create a file, and the f... |  |
-| 12 | Grant alice administrative rights through sudo and record why sudo ... |  |
+| 9 | Create a shared directory owned by the group with permissions that allow the group to write but exclude everyone else. |  |
+| 10 | Set the setgid bit so that files created inside inherit the group, which is what makes shared directories actually work in practice. |  |
+| 11 | Verify the access control works: alice can create a file, and the file inherits the support group from the setgid bit. |  |
+| 12 | Grant alice administrative rights through sudo and record why sudo is preferred over logging in as root. |  |
 
 ## Verification
 

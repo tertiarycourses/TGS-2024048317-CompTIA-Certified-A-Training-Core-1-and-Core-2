@@ -8,18 +8,18 @@
 
 | Step | What you did | What you observed |
 | --- | --- | --- |
-| 1 | Build the escalation ladder from least to most destructive: reboot,... |  |
-| 2 | Record the guiding rule: always start at the lowest rung that could... |  |
-| 3 | Record what System Restore does and does not do: it rolls back syst... |  |
-| 4 | Verify System Restore is enabled and list the available restore poi... |  |
-| 5 | Diagnose a blue screen of death: record the stop code, identify wha... |  |
-| 6 | Diagnose sluggish performance using Task Manager and Resource Monit... |  |
-| 7 | Diagnose frequent shutdowns by separating the causes: overheating, ... |  |
-| 8 | Diagnose applications crashing by checking Event Viewer's Applicati... |  |
-| 9 | Diagnose 'no OS found' by checking boot order, removing bootable US... |  |
-| 10 | Diagnose a slow profile load by examining startup applications, and... |  |
-| 11 | Diagnose USB controller resource warnings, and record that too many... |  |
-| 12 | Record how to access the Windows Recovery Environment — three faile... |  |
+| 1 | Build the escalation ladder from least to most destructive: reboot, restart the service, roll back the driver or update, System Restore, sfc and DISM, Startup Repair, Reset keeping files, Reset removing everything, then reimage. |  |
+| 2 | Record the guiding rule: always start at the lowest rung that could plausibly resolve the symptom, because every rung up costs the user more time and more data risk. |  |
+| 3 | Record what System Restore does and does not do: it rolls back system files, drivers and the registry, but it does not restore or remove personal files. |  |
+| 4 | Verify System Restore is enabled and list the available restore points, since a machine with protection disabled has no restore points at all. |  |
+| 5 | Diagnose a blue screen of death: record the stop code, identify what changed immediately before it, then roll back the most recent driver or update and test memory. |  |
+| 6 | Diagnose sluggish performance using Task Manager and Resource Monitor to identify which of CPU, memory, disk or network is saturated before treating anything. |  |
+| 7 | Diagnose frequent shutdowns by separating the causes: overheating, a failing power supply, corrupt system files or a failing driver, and give the test that distinguishes them. |  |
+| 8 | Diagnose applications crashing by checking Event Viewer's Application log for the faulting module, then repairing or reinstalling the application. |  |
+| 9 | Diagnose 'no OS found' by checking boot order, removing bootable USB devices, confirming the disk is detected, then repairing the boot record from the recovery environment. |  |
+| 10 | Diagnose a slow profile load by examining startup applications, and record that a roaming profile that has grown large is a common cause in a domain environment. |  |
+| 11 | Diagnose USB controller resource warnings, and record that too many devices on one bus is resolved by redistributing devices across controllers. |  |
+| 12 | Record how to access the Windows Recovery Environment — three failed boots trigger it automatically, or hold Shift while selecting Restart — and list the tools it provides. |  |
 
 ## Verification
 

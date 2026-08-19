@@ -8,18 +8,18 @@
 
 | Step | What you did | What you observed |
 | --- | --- | --- |
-| 1 | Build the standards table with rows for 802.11a, b, g, n, ac and ax... |  |
-| 2 | Record that 2.4 GHz offers only three non-overlapping channels — 1,... |  |
-| 3 | Record that 5 GHz offers around 24 non-overlapping 20 MHz channels,... |  |
-| 4 | Open a Wi-Fi analyser on your device and record every visible SSID ... |  |
-| 5 | Identify from your scan which 2.4 GHz channels are most congested i... |  |
-| 6 | Interpret the signal strengths you recorded: better than -50 dBm is... |  |
-| 7 | Sketch a three-room office floor plan and place three access points... |  |
-| 8 | Assign 2.4 GHz channels 1, 6 and 11 to the three access points so t... |  |
-| 9 | Explain the difference between co-channel interference, where cells... |  |
-| 10 | List five physical sources of 2.4 GHz interference in a typical off... |  |
-| 11 | State the security configuration for all three access points: WPA3 ... |  |
-| 12 | Write the justification paragraph explaining why your channel assig... |  |
+| 1 | Build the standards table with rows for 802.11a, b, g, n, ac and ax and columns for frequency band, maximum theoretical throughput, channel width and backward compatibility. |  |
+| 2 | Record that 2.4 GHz offers only three non-overlapping channels — 1, 6 and 11 — and explain from channel width why any other choice overlaps. |  |
+| 3 | Record that 5 GHz offers around 24 non-overlapping 20 MHz channels, and note the trade-off: more channels and more speed, but shorter range and poorer wall penetration. |  |
+| 4 | Open a Wi-Fi analyser on your device and record every visible SSID with its channel, band and signal strength in dBm. |  |
+| 5 | Identify from your scan which 2.4 GHz channels are most congested in your location and which of 1, 6 or 11 is least used. |  |
+| 6 | Interpret the signal strengths you recorded: better than -50 dBm is excellent, -60 is good, -70 is usable and worse than -80 is unreliable. |  |
+| 7 | Sketch a three-room office floor plan and place three access points to give overlapping coverage with no dead zones. |  |
+| 8 | Assign 2.4 GHz channels 1, 6 and 11 to the three access points so that no two adjacent cells share a channel, and mark each on the sketch. |  |
+| 9 | Explain the difference between co-channel interference, where cells share a channel and must take turns, and adjacent-channel interference, where overlapping channels corrupt each other's transmissions. |  |
+| 10 | List five physical sources of 2.4 GHz interference in a typical office — microwave ovens, cordless phones, Bluetooth devices, fluorescent ballasts and thick or metal-reinforced walls. |  |
+| 11 | State the security configuration for all three access points: WPA3 where supported, WPA2 with AES-CCMP as the minimum, and never WEP or WPA with TKIP. |  |
+| 12 | Write the justification paragraph explaining why your channel assignment minimises interference, referencing the non-overlapping constraint explicitly. |  |
 
 ## Verification
 

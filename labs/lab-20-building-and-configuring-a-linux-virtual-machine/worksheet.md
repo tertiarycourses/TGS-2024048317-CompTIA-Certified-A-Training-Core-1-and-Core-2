@@ -8,18 +8,18 @@
 
 | Step | What you did | What you observed |
 | --- | --- | --- |
-| 1 | Open https://killercoda.com/playgrounds/scenario/ubuntu and wait fo... |  |
-| 2 | Record the guest's identity: distribution, version, kernel and arch... |  |
-| 3 | Record the allocated resources: CPU count, total and available memo... |  |
-| 4 | Update the package index and apply available upgrades, the mandator... |  |
+| 1 | Open https://killercoda.com/playgrounds/scenario/ubuntu and wait for the terminal to become available. This is a real Ubuntu machine with root access, running in your browser. |  |
+| 2 | Record the guest's identity: distribution, version, kernel and architecture — the first thing to establish on any unfamiliar machine. |  |
+| 3 | Record the allocated resources: CPU count, total and available memory, and disk capacity and usage. |  |
+| 4 | Update the package index and apply available upgrades, the mandatory first post-installation task on any new guest. |  |
 | 5 | Install the tool set this course uses across the Linux labs. |  |
-| 6 | Record the network configuration: interface addresses, the default ... |  |
-| 7 | Verify outbound connectivity and DNS resolution in one test, then r... |  |
-| 8 | Create a standard non-root user for daily work, following the princ... |  |
-| 9 | Grant that user administrative rights through sudo rather than by u... |  |
-| 10 | Create a working directory structure for the course labs and confir... |  |
-| 11 | Set correct ownership on the new directories so the standard user, ... |  |
-| 12 | Write the build record capturing the OS version, resources, install... |  |
+| 6 | Record the network configuration: interface addresses, the default route and the configured DNS resolvers. |  |
+| 7 | Verify outbound connectivity and DNS resolution in one test, then record the result. |  |
+| 8 | Create a standard non-root user for daily work, following the principle of least privilege. |  |
+| 9 | Grant that user administrative rights through sudo rather than by using the root account directly. |  |
+| 10 | Create a working directory structure for the course labs and confirm it was created as expected. |  |
+| 11 | Set correct ownership on the new directories so the standard user, not root, owns their own files. |  |
+| 12 | Write the build record capturing the OS version, resources, installed packages, created user and network settings, so the machine could be rebuilt identically. |  |
 
 ## Verification
 

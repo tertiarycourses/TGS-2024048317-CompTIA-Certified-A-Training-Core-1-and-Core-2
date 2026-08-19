@@ -8,18 +8,18 @@
 
 | Step | What you did | What you observed |
 | --- | --- | --- |
-| 1 | List the required change request fields: purpose, scope, affected s... |  |
-| 2 | Write the purpose for the change scenario: deploying a critical sec... |  |
-| 3 | Define the scope precisely, naming which systems and users are affe... |  |
-| 4 | Perform the risk analysis: what could go wrong, how likely it is, w... |  |
-| 5 | Record why sandbox testing precedes production: a patch validated o... |  |
-| 6 | Write the rollback plan with specific steps, and record the rule th... |  |
-| 7 | Schedule the change in a maintenance window that minimises business... |  |
-| 8 | Identify the approver and record why the person implementing a chan... |  |
-| 9 | Define the post-change review: how you confirm success, how long yo... |  |
-| 10 | Build the asset register with columns for asset tag, type, make and... |  |
-| 11 | Record the procurement life cycle stages: requisition, approval, pu... |  |
-| 12 | Record why asset tags and barcodes matter operationally: they make ... |  |
+| 1 | List the required change request fields: purpose, scope, affected systems and users, risk analysis, risk level, change plan, rollback plan, scheduled date and time, approval and post-change review. |  |
+| 2 | Write the purpose for the change scenario: deploying a critical security patch to 50 workstations after a vulnerability disclosure. |  |
+| 3 | Define the scope precisely, naming which systems and users are affected and, equally importantly, which are explicitly out of scope. |  |
+| 4 | Perform the risk analysis: what could go wrong, how likely it is, what the impact would be, and what mitigation reduces it. Assign an overall risk level with justification. |  |
+| 5 | Record why sandbox testing precedes production: a patch validated on a representative test machine catches the incompatibility before it reaches 50 users. |  |
+| 6 | Write the rollback plan with specific steps, and record the rule that a change with no viable rollback needs a much stronger justification to proceed. |  |
+| 7 | Schedule the change in a maintenance window that minimises business impact, and state who must be notified and how far in advance. |  |
+| 8 | Identify the approver and record why the person implementing a change should not be the person approving it. |  |
+| 9 | Define the post-change review: how you confirm success, how long you monitor, and what condition would trigger the rollback. |  |
+| 10 | Build the asset register with columns for asset tag, type, make and model, serial number, assigned user, location, purchase date, warranty expiry and licence status. |  |
+| 11 | Record the procurement life cycle stages: requisition, approval, purchase, receipt and tagging, deployment, maintenance, and end-of-life disposal. |  |
+| 12 | Record why asset tags and barcodes matter operationally: they make audit possible, they support warranty claims, and they identify a device recovered after loss or theft. |  |
 
 ## Verification
 

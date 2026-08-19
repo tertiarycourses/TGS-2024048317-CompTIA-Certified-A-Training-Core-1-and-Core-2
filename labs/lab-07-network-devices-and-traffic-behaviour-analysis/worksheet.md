@@ -8,18 +8,18 @@
 
 | Step | What you did | What you observed |
 | --- | --- | --- |
-| 1 | Open PCAP Analyzer at https://alfredang.github.io/pcapanalyzer/ and... |  |
-| 2 | Record the four dashboard metrics: packet count, total bytes, captu... |  |
-| 3 | Open the protocol distribution view and list every protocol present... |  |
-| 4 | Open Top talkers and record the three most active endpoints by traf... |  |
-| 5 | Open Top conversations and identify which pairs of hosts exchange t... |  |
-| 6 | Select an individual packet in the packets table and open its detai... |  |
-| 7 | From the packet detail, identify the Layer 2 MAC addresses and the ... |  |
-| 8 | Build the device comparison matrix with rows for hub, switch, route... |  |
-| 9 | Explain in writing why a hub creates one collision domain across al... |  |
-| 10 | Explain why a switch forwards a broadcast frame out of every port b... |  |
-| 11 | Apply the protocol filter in the packets table to isolate one proto... |  |
-| 12 | Write a short conclusion stating what the capture reveals about the... |  |
+| 1 | Open PCAP Analyzer at https://alfredang.github.io/pcapanalyzer/ and click the Sample button to generate a demonstration capture. Nothing is uploaded — parsing happens in your browser. |  |
+| 2 | Record the four dashboard metrics: packet count, total bytes, capture duration and average packet size. |  |
+| 3 | Open the protocol distribution view and list every protocol present with its share of the capture. |  |
+| 4 | Open Top talkers and record the three most active endpoints by traffic volume, noting their addresses. |  |
+| 5 | Open Top conversations and identify which pairs of hosts exchange the most data, then state what kind of session each pair most likely represents. |  |
+| 6 | Select an individual packet in the packets table and open its detail view to read the source, destination, protocol and length. |  |
+| 7 | From the packet detail, identify the Layer 2 MAC addresses and the Layer 3 IP addresses, and explain which one a switch uses to forward and which one a router uses. |  |
+| 8 | Build the device comparison matrix with rows for hub, switch, router, firewall and access point and columns for OSI layer, forwarding basis, collision domains, broadcast domains and typical use. |  |
+| 9 | Explain in writing why a hub creates one collision domain across all ports while a switch creates one per port, and what that means for network performance. |  |
+| 10 | Explain why a switch forwards a broadcast frame out of every port but a router does not forward it at all, and connect this to why VLANs are needed. |  |
+| 11 | Apply the protocol filter in the packets table to isolate one protocol, and record how the packet count changes. |  |
+| 12 | Write a short conclusion stating what the capture reveals about the network — how many broadcast domains are visible, and whether a router is present in the path. |  |
 
 ## Verification
 

@@ -8,18 +8,18 @@
 
 | Step | What you did | What you observed |
 | --- | --- | --- |
-| 1 | Build the isolation sequence with five distinct check points: the s... |  |
-| 2 | Check the source first: confirm the machine is actually on and prod... |  |
-| 3 | Check the input selection second, because a monitor showing 'no sig... |  |
-| 4 | Check the cable third by substituting a known-good cable of the sam... |  |
-| 5 | Diagnose 'no image but the backlight is clearly on' as a signal pro... |  |
-| 6 | Diagnose 'a very faint image visible only under a torch' as a dead ... |  |
-| 7 | Diagnose a dim projector image as a bulb nearing end of life, and r... |  |
-| 8 | Diagnose a fuzzy or blurry image as either a resolution that is not... |  |
-| 9 | Diagnose display burn-in as a persistent ghost of a static image, n... |  |
-| 10 | Diagnose dead pixels as permanently black or stuck-colour dots, and... |  |
-| 11 | Diagnose intermittent projector shutdown as either overheating from... |  |
-| 12 | Complete the map with flashing screen, incorrect colour display, au... |  |
+| 1 | Build the isolation sequence with five distinct check points: the source device, the cable, the input selection, the panel and backlight, and the display settings. |  |
+| 2 | Check the source first: confirm the machine is actually on and producing output, using its own status lights and any secondary display. |  |
+| 3 | Check the input selection second, because a monitor showing 'no signal' while set to the wrong input is the single most common display complaint and costs nothing to fix. |  |
+| 4 | Check the cable third by substituting a known-good cable of the same type, and record that a cable can fail intermittently while looking perfectly intact. |  |
+| 5 | Diagnose 'no image but the backlight is clearly on' as a signal problem — source, cable or input — rather than a panel fault. |  |
+| 6 | Diagnose 'a very faint image visible only under a torch' as a dead backlight or, on older CCFL panels, a failed inverter. The panel itself is working. |  |
+| 7 | Diagnose a dim projector image as a bulb nearing end of life, and record that projector bulbs are rated in hours and dim progressively rather than failing suddenly. |  |
+| 8 | Diagnose a fuzzy or blurry image as either a resolution that is not the panel's native resolution, or a poor analog cable connection on VGA. |  |
+| 9 | Diagnose display burn-in as a persistent ghost of a static image, note that it affects OLED and plasma most, and record that mitigation is a moving image or a pixel refresh cycle. |  |
+| 10 | Diagnose dead pixels as permanently black or stuck-colour dots, and record that manufacturers replace a panel only above a threshold count stated in the warranty. |  |
+| 11 | Diagnose intermittent projector shutdown as either overheating from a blocked filter or intake, or an eco or standby mode triggering on a static image. |  |
+| 12 | Complete the map with flashing screen, incorrect colour display, audio not passing over HDMI and an image that flickers when the laptop lid is moved, giving the component and confirming test for each. |  |
 
 ## Verification
 

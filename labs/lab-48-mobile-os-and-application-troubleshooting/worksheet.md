@@ -8,18 +8,18 @@
 
 | Step | What you did | What you observed |
 | --- | --- | --- |
-| 1 | Build the application escalation sequence in order: force close, cl... |  |
-| 2 | Record the critical distinction: clearing the cache is non-destruct... |  |
-| 3 | Practise the sequence on a real application, recording the exact se... |  |
-| 4 | Diagnose an application that fails to launch by working the sequenc... |  |
-| 5 | Diagnose an application that fails to update by checking available ... |  |
-| 6 | Diagnose battery drain by separating the causes: background applica... |  |
-| 7 | Use the device's battery usage screen to identify the top three con... |  |
-| 8 | Diagnose overheating by separating sustained high load, a charging ... |  |
-| 9 | Diagnose connectivity faults with a fixed sequence per technology: ... |  |
-| 10 | Record what resetting network settings actually does — it clears al... |  |
-| 11 | Build the security symptom map: high network traffic, sluggish resp... |  |
-| 12 | Record the causes behind those symptoms — sideloaded APKs from outs... |  |
+| 1 | Build the application escalation sequence in order: force close, clear the cache, clear the application data, uninstall and reinstall, then check for OS and application updates. |  |
+| 2 | Record the critical distinction: clearing the cache is non-destructive, while clearing application data resets the app and removes local content including saved logins. |  |
+| 3 | Practise the sequence on a real application, recording the exact settings path for force close, clear cache and clear data on your device. |  |
+| 4 | Diagnose an application that fails to launch by working the sequence, and record which step resolved it. |  |
+| 5 | Diagnose an application that fails to update by checking available storage, checking the network connection, and clearing the store application's own cache. |  |
+| 6 | Diagnose battery drain by separating the causes: background applications, a weak signal forcing the radio to maximum transmit power, high screen brightness, or a genuinely degraded battery. |  |
+| 7 | Use the device's battery usage screen to identify the top three consuming applications, and record the figures. |  |
+| 8 | Diagnose overheating by separating sustained high load, a charging fault, an ambient heat source and a failing battery, and record that a swollen battery is an immediate safety stop. |  |
+| 9 | Diagnose connectivity faults with a fixed sequence per technology: toggle airplane mode, forget and rejoin the Wi-Fi network, unpair and re-pair the Bluetooth device, then reset network settings. |  |
+| 10 | Record what resetting network settings actually does — it clears all saved Wi-Fi networks, Bluetooth pairings and VPN configurations — so the user must be warned before you do it. |  |
+| 11 | Build the security symptom map: high network traffic, sluggish response, data cap notifications, unexpected ads, fake security warnings and unfamiliar applications. |  |
+| 12 | Record the causes behind those symptoms — sideloaded APKs from outside the official store, a rooted or jailbroken device, application spoofing, or developer mode left enabled — and the response for each. |  |
 
 ## Verification
 

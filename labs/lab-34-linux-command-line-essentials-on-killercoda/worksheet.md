@@ -8,18 +8,18 @@
 
 | Step | What you did | What you observed |
 | --- | --- | --- |
-| 1 | Open https://killercoda.com/playgrounds/scenario/ubuntu and wait fo... |  |
-| 2 | Install the packages this lab uses and note that apt is the package... |  |
+| 1 | Open https://killercoda.com/playgrounds/scenario/ubuntu and wait for the terminal. Confirm where you are and who you are running as. |  |
+| 2 | Install the packages this lab uses and note that apt is the package manager on Debian and Ubuntu. |  |
 | 3 | Create a working directory tree and confirm its structure visually. |  |
-| 4 | Create files with content so the later commands have real data to o... |  |
-| 5 | List files with the long format showing permissions, ownership, siz... |  |
-| 6 | Display file contents with cat, then page through a longer file wit... |  |
-| 7 | Search file contents with grep, which is the command you use to fin... |  |
+| 4 | Create files with content so the later commands have real data to operate on. |  |
+| 5 | List files with the long format showing permissions, ownership, size and modification time, including hidden files. |  |
+| 6 | Display file contents with cat, then page through a longer file with less to see how each is used. |  |
+| 7 | Search file contents with grep, which is the command you use to find an error in a log. |  |
 | 8 | Find files by name and by type across a directory tree. |  |
-| 9 | Copy, move and rename files, then confirm the result of each operat... |  |
-| 10 | Check storage and memory usage, which are the first two things to c... |  |
-| 11 | List running processes and identify the top consumers, then record ... |  |
-| 12 | Change file permissions and ownership, then verify both, and record... |  |
+| 9 | Copy, move and rename files, then confirm the result of each operation. |  |
+| 10 | Check storage and memory usage, which are the first two things to check on a Linux machine reported as slow. |  |
+| 11 | List running processes and identify the top consumers, then record how you would terminate a runaway process. |  |
+| 12 | Change file permissions and ownership, then verify both, and record the numeric meaning of the mode you set. |  |
 
 ## Verification
 

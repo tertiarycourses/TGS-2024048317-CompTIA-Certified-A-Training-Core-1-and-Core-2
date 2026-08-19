@@ -8,18 +8,18 @@
 
 | Step | What you did | What you observed |
 | --- | --- | --- |
-| 1 | Build the diagnostic sequence bottom-up: physical link, IP addressi... |  |
-| 2 | Open the Killercoda Ubuntu playground and install the diagnostic to... |  |
-| 3 | Layer 1 — confirm the interface is physically up and has carrier, s... |  |
-| 4 | Layer 2 and 3 — record the interface addresses and identify whether... |  |
-| 5 | Verify the address and mask in IP Calculator at https://alfredang.g... |  |
-| 6 | Layer 3 — confirm a default route exists, then test reachability to... |  |
-| 7 | Test reachability beyond the gateway by IP address, which isolates ... |  |
-| 8 | Layer 7 — test DNS resolution separately, because a machine that pi... |  |
-| 9 | Trace the path to identify where latency is introduced or where the... |  |
-| 10 | Check active connections and listening sockets to confirm the appli... |  |
-| 11 | Capture traffic and analyse it in PCAP Analyzer when the commands a... |  |
-| 12 | Build the symptom map for APIPA address, no default gateway, pings ... |  |
+| 1 | Build the diagnostic sequence bottom-up: physical link, IP addressing, default gateway, DNS resolution, then the application itself. Testing out of order produces misleading results. |  |
+| 2 | Open the Killercoda Ubuntu playground and install the diagnostic tool set. |  |
+| 3 | Layer 1 — confirm the interface is physically up and has carrier, since every layer above depends on it. |  |
+| 4 | Layer 2 and 3 — record the interface addresses and identify whether the address is valid, or an APIPA 169.254 address meaning DHCP failed. |  |
+| 5 | Verify the address and mask in IP Calculator at https://alfredang.github.io/ipcalculator/ and confirm the host sits inside its own subnet's usable range. |  |
+| 6 | Layer 3 — confirm a default route exists, then test reachability to the gateway. No default route means no traffic can leave the subnet. |  |
+| 7 | Test reachability beyond the gateway by IP address, which isolates routing from DNS entirely. |  |
+| 8 | Layer 7 — test DNS resolution separately, because a machine that pings an IP but not a name has a DNS fault and nothing else. |  |
+| 9 | Trace the path to identify where latency is introduced or where the path stops. |  |
+| 10 | Check active connections and listening sockets to confirm the application layer is actually working. |  |
+| 11 | Capture traffic and analyse it in PCAP Analyzer when the commands are inconclusive, since the packets show what the tools only summarise. |  |
+| 12 | Build the symptom map for APIPA address, no default gateway, pings IP but not name, high latency, jitter degrading VoIP, port flapping, intermittent wireless and limited connectivity — giving the layer, the test and the fix for each. |  |
 
 ## Verification
 

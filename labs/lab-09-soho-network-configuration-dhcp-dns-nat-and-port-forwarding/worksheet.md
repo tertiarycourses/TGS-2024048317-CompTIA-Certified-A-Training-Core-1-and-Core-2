@@ -8,18 +8,18 @@
 
 | Step | What you did | What you observed |
 | --- | --- | --- |
-| 1 | Plan the addressing before touching the router: choose 192.168.50.0... |  |
-| 2 | Verify the plan in IP Calculator by entering 192.168.50.0/24 and co... |  |
-| 3 | Configure the DHCP scope on the router with the start and end addre... |  |
-| 4 | Define the exclusion range covering .2 to .99 so the DHCP server ne... |  |
-| 5 | Create a DHCP reservation binding a printer's MAC address to a fixe... |  |
-| 6 | Set the DNS servers the router hands to clients, and record whether... |  |
-| 7 | On a client, release and renew the DHCP lease and record the addres... |  |
-| 8 | On the Killercoda playground, inspect the equivalent client-side co... |  |
-| 9 | Verify DNS resolution works through the configured resolver and rec... |  |
-| 10 | Explain how NAT lets many private hosts share one public address, a... |  |
-| 11 | Create a port-forwarding rule directing external TCP 3389 to an int... |  |
-| 12 | Document the complete configuration in a table a colleague could us... |  |
+| 1 | Plan the addressing before touching the router: choose 192.168.50.0/24, reserve .1 for the gateway, .2 to .99 for static assignments and .100 to .250 for the DHCP scope. |  |
+| 2 | Verify the plan in IP Calculator by entering 192.168.50.0/24 and confirming the usable host range covers every allocation you made. |  |
+| 3 | Configure the DHCP scope on the router with the start and end addresses from your plan, and set the lease time. |  |
+| 4 | Define the exclusion range covering .2 to .99 so the DHCP server never hands out an address reserved for static assignment. |  |
+| 5 | Create a DHCP reservation binding a printer's MAC address to a fixed address such as 192.168.50.20, so it always receives the same IP. |  |
+| 6 | Set the DNS servers the router hands to clients, and record whether you used the ISP resolver or a public one such as 8.8.8.8 or 1.1.1.1. |  |
+| 7 | On a client, release and renew the DHCP lease and record the address, mask, gateway and DNS servers received. |  |
+| 8 | On the Killercoda playground, inspect the equivalent client-side configuration and identify the interface address, mask and default route. |  |
+| 9 | Verify DNS resolution works through the configured resolver and record the answer section of the response. |  |
+| 10 | Explain how NAT lets many private hosts share one public address, and identify from the router status page what your public address is. |  |
+| 11 | Create a port-forwarding rule directing external TCP 3389 to an internal host, and state the security risk of exposing RDP directly to the internet. |  |
+| 12 | Document the complete configuration in a table a colleague could use to rebuild the router from scratch after a factory reset. |  |
 
 ## Verification
 

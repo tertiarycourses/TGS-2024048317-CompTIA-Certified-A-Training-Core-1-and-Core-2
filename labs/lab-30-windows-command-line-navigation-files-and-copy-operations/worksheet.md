@@ -8,18 +8,18 @@
 
 | Step | What you did | What you observed |
 | --- | --- | --- |
-| 1 | Open Command Prompt as administrator and confirm your starting loca... |  |
-| 2 | Practise navigation: move between directories, move up one level, a... |  |
-| 3 | List directory contents with the switches that matter: all files in... |  |
+| 1 | Open Command Prompt as administrator and confirm your starting location and the commands available. |  |
+| 2 | Practise navigation: move between directories, move up one level, and return to the drive root. |  |
+| 3 | List directory contents with the switches that matter: all files including hidden, and a recursive listing. |  |
 | 4 | Create a directory structure for the exercise and confirm it exists. |  |
-| 5 | Create test files with content so the copy operations have somethin... |  |
-| 6 | Use copy for a single file and record its limitation — it copies fi... |  |
-| 7 | Use xcopy with the switches for subdirectories including empty ones... |  |
-| 8 | Use robocopy to mirror the source to the destination, which is the ... |  |
-| 9 | Read the robocopy log and record the files copied, skipped and fail... |  |
-| 10 | Record why robocopy is the right choice for migrations: it retries ... |  |
-| 11 | Warn on the /MIR switch: it makes the destination identical to the ... |  |
-| 12 | Verify the migration by comparing both directories, then clean up t... |  |
+| 5 | Create test files with content so the copy operations have something real to move. |  |
+| 6 | Use copy for a single file and record its limitation — it copies files only and cannot handle directory trees. |  |
+| 7 | Use xcopy with the switches for subdirectories including empty ones, and record that it handles trees but cannot resume. |  |
+| 8 | Use robocopy to mirror the source to the destination, which is the correct tool for a real migration. |  |
+| 9 | Read the robocopy log and record the files copied, skipped and failed, and the total bytes transferred. |  |
+| 10 | Record why robocopy is the right choice for migrations: it retries failed files, resumes interrupted transfers, preserves attributes and timestamps, and logs everything. |  |
+| 11 | Warn on the /MIR switch: it makes the destination identical to the source, which means it deletes files in the destination that are not in the source. Verify the destination before every mirror. |  |
+| 12 | Verify the migration by comparing both directories, then clean up the exercise files. |  |
 
 ## Verification
 

@@ -39,8 +39,10 @@ Aligned to the Skills Framework TSC **Infrastructure Support (ICT-OUS-3007-1.1)*
 | [Trainer Slides](courseware/CompTIA-Certified-A-Training-Core-1-and-Core-2-v7.1.pptx) | PPTX · [PDF](courseware/CompTIA-Certified-A-Training-Core-1-and-Core-2-v7.1.pdf) | 269-slide visual deck — concepts, process maps and verification criteria. |
 | [Learner Guide](courseware/LG-CompTIA-Certified-A-Training-Core-1-and-Core-2.docx) | DOCX · [PDF](courseware/LG-CompTIA-Certified-A-Training-Core-1-and-Core-2.pdf) · [Markdown](LG-CompTIA-Certified-A-Training-Core-1-and-Core-2.md) | Full step-by-step procedure for all 54 labs, plus the A+ port reference and glossary. |
 | [Lesson Plan](courseware/LP-CompTIA-Certified-A-Training-Core-1-and-Core-2.docx) | DOCX · [PDF](courseware/LP-CompTIA-Certified-A-Training-Core-1-and-Core-2.pdf) | 5-day schedule, 8 instructional hours per day, mapped to every lab. |
-| [Labs Index](labs/README.md) | Markdown | All 54 labs — **each in its own folder** with a README and a worksheet. |
-| [Tools Reference](labs/tools.md) | Markdown | The browser toolkit plus the Windows and Linux command references. |
+| [Labs Index](labs/README.md) | Markdown · [PDF](labs/README.pdf) | All 54 labs — **each in its own folder** with a README and a worksheet. |
+| [Tools Reference](labs/tools.md) | Markdown · [PDF](labs/tools.pdf) | The browser toolkit plus the Windows and Linux command references. |
+
+Every lab is also provided as a **print-ready PDF** beside its Markdown — `README.pdf` (the lab) and `worksheet.pdf` (the evidence record learners fill in). Hand the worksheet out on paper; the write-in column is sized for it.
 
 > The slide deck teaches the **concepts**; the detailed step-by-step lives in the **Learner Guide** and the **lab folders**.
 
@@ -103,7 +105,7 @@ No installation, no licences, no virtual machine downloads.
 
 1. Read the [Learner Guide](LG-CompTIA-Certified-A-Training-Core-1-and-Core-2.md) introduction and the **safety section** before any hardware lab.
 2. Open the [labs index](labs/README.md) and work the labs in order — later troubleshooting labs build on earlier configuration labs.
-3. Each lab folder contains `README.md` (the procedure) and `worksheet.md` (your evidence record).
+3. Each lab folder contains `README.md` (the procedure) and `worksheet.md` (your evidence record), plus a print-ready PDF of each.
 4. Complete the **Test it** verification in every lab before moving on — it is what the practical assessment mirrors.
 5. Sit the [practice exam](https://exams.tertiaryinfotech.com) to find the domains to revise before booking the real exams.
 

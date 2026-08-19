@@ -161,7 +161,10 @@ for a in ACT:
     W.append("| Step | What you did | What you observed |")
     W.append("| --- | --- | --- |")
     for i,(instr,cmd) in enumerate(a["steps"],1):
-        short=instr if len(instr)<=70 else instr[:67]+"..."
+        # The full instruction, not a 70-character stub: a learner filling this in
+        # away from the lab README cannot act on "Verify the /26 result by hand: 32...".
+        # A pipe would break the Markdown table, so escape it.
+        short=" ".join(instr.split()).replace("|", "\\|")
         W.append(f"| {i} | {short} |  |")
     W.append("")
     W.append("## Verification")
@@ -220,10 +223,13 @@ for exam in ["Core 1","Core 2"]:
         I.append("")
         I.append(t["subtitle"])
         I.append("")
-        I.append("| Lab | Title | Exam objective |")
-        I.append("| --- | --- | --- |")
+        I.append("| Lab | Title | Print | Exam objective |")
+        I.append("| --- | --- | --- | --- |")
         for a in acts:
-            I.append(f"| [{a['num']:02d}]({folder_name(a)}/) | [{a['title']}]({folder_name(a)}/README.md) | {a['objective']} |")
+            fn=folder_name(a)
+            I.append(f"| [{a['num']:02d}]({fn}/) | [{a['title']}]({fn}/README.md) | "
+                     f"[lab PDF]({fn}/README.pdf) · [worksheet PDF]({fn}/worksheet.pdf) | "
+                     f"{a['objective']} |")
         I.append("")
 I.append("## Lab folder structure")
 I.append("")

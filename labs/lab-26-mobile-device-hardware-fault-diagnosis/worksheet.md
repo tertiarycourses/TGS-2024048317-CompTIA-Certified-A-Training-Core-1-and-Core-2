@@ -8,18 +8,18 @@
 
 | Step | What you did | What you observed |
 | --- | --- | --- |
-| 1 | Record the safety rule that governs this entire lab: a swollen batt... |  |
-| 2 | Check battery health from the device's own settings, recording the ... |  |
-| 3 | Diagnose poor battery life by separating its causes: a genuinely de... |  |
-| 4 | Diagnose a swollen battery from its physical signs — a lifting scre... |  |
-| 5 | Diagnose improper or intermittent charging by testing in a fixed or... |  |
-| 6 | Record that a charging port packed with pocket lint is extremely co... |  |
-| 7 | Diagnose a broken screen by distinguishing cracked glass with a wor... |  |
-| 8 | Diagnose digitizer failure as touch that is unresponsive, offset fr... |  |
-| 9 | Diagnose overheating from its causes: sustained high load, a faulty... |  |
-| 10 | Diagnose liquid damage, record that the device must be powered off ... |  |
-| 11 | Diagnose physically damaged ports and record the repair options in ... |  |
-| 12 | Complete the map with poor or no connectivity, cursor drift requiri... |  |
+| 1 | Record the safety rule that governs this entire lab: a swollen battery must never be punctured, compressed or charged. Power the device down, isolate it from flammable material and follow the organisation's hazardous disposal procedure. |  |
+| 2 | Check battery health from the device's own settings, recording the maximum capacity percentage and the cycle count where the operating system exposes them. |  |
+| 3 | Diagnose poor battery life by separating its causes: a genuinely degraded battery, background applications, a weak cellular signal forcing the radio to full transmit power, or high screen brightness. |  |
+| 4 | Diagnose a swollen battery from its physical signs — a lifting screen, a bulging back cover or a device that no longer sits flat — and apply the safety response immediately. |  |
+| 5 | Diagnose improper or intermittent charging by testing in a fixed order: substitute the cable, substitute the charger, inspect the port for lint and damage, then suspect the battery. |  |
+| 6 | Record that a charging port packed with pocket lint is extremely common and is cleared with a wooden or plastic pick on a powered-off device — never a metal tool. |  |
+| 7 | Diagnose a broken screen by distinguishing cracked glass with a working display, a working digitizer with a dead display, and a working display with a dead digitizer. |  |
+| 8 | Diagnose digitizer failure as touch that is unresponsive, offset from where you press, or registering phantom touches, while the image remains perfect. |  |
+| 9 | Diagnose overheating from its causes: sustained high load, a faulty charging circuit, an ambient heat source, or a failing battery — and record that persistent overheating with a swollen battery is an immediate safety stop. |  |
+| 10 | Diagnose liquid damage, record that the device must be powered off and not charged, and note that visible corrosion means board-level damage requiring specialist repair. |  |
+| 11 | Diagnose physically damaged ports and record the repair options in order of cost: port replacement by a specialist, board replacement, or device replacement. |  |
+| 12 | Complete the map with poor or no connectivity, cursor drift requiring touch recalibration, and malware symptoms, giving a technical and a safety response for each. |  |
 
 ## Verification
 

@@ -8,18 +8,18 @@
 
 | Step | What you did | What you observed |
 | --- | --- | --- |
-| 1 | Open https://alfredang.github.io/cybersecuritysimulator/ and select... |  |
-| 2 | Classify at least ten emails as safe or phishing using the category... |  |
-| 3 | Record your score and, for every email you classified wrongly, reco... |  |
-| 4 | Use the annotated walkthrough feature to review the red flags on a ... |  |
-| 5 | Paste a suspicious link into the URL inspector and record what the ... |  |
-| 6 | Build the phishing indicator checklist: mismatched sender domain, g... |  |
-| 7 | Complete the phishing quick quiz and record your score and any conc... |  |
-| 8 | Switch to the Social Engineering module and work through the scenar... |  |
-| 9 | Use the tactic filter to study each tactic in turn: pretexting, bai... |  |
-| 10 | Build the tactic reference with a definition, a realistic example a... |  |
-| 11 | Distinguish the phishing variants precisely: phishing is broad and ... |  |
-| 12 | Write the training outline: session objectives, the scenarios you w... |  |
+| 1 | Open https://alfredang.github.io/cybersecuritysimulator/ and select Phishing from the top menu. |  |
+| 2 | Classify at least ten emails as safe or phishing using the category filter to cover Banking, Tech, Workplace, Delivery, Social Media and Lottery. |  |
+| 3 | Record your score and, for every email you classified wrongly, record the indicator you missed. |  |
+| 4 | Use the annotated walkthrough feature to review the red flags on a phishing example, and record every flag it highlights. |  |
+| 5 | Paste a suspicious link into the URL inspector and record what the analysis reveals about the actual destination against the displayed text. |  |
+| 6 | Build the phishing indicator checklist: mismatched sender domain, generic greeting, manufactured urgency, unexpected attachment, link text differing from destination, spelling and grammar errors, and a request for credentials. |  |
+| 7 | Complete the phishing quick quiz and record your score and any concept you needed to revisit. |  |
+| 8 | Switch to the Social Engineering module and work through the scenario decisions, recording your score. |  |
+| 9 | Use the tactic filter to study each tactic in turn: pretexting, baiting, tailgating, vishing, smishing, business email compromise, quid pro quo and watering hole. |  |
+| 10 | Build the tactic reference with a definition, a realistic example and the specific defence for each of the eight tactics. |  |
+| 11 | Distinguish the phishing variants precisely: phishing is broad and untargeted, spear phishing targets a named individual, whaling targets a senior executive, vishing uses voice and smishing uses SMS. |  |
+| 12 | Write the training outline: session objectives, the scenarios you would present, how you would test retention, and the reporting procedure a user must follow when they suspect an attack. |  |
 
 ## Verification
 

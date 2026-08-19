@@ -8,16 +8,16 @@
 
 | Step | What you did | What you observed |
 | --- | --- | --- |
-| 1 | Put on the anti-static strap and clip it to an unpainted metal poin... |  |
-| 2 | Shut the laptop down completely — not sleep or hibernate — then dis... |  |
-| 3 | Press and hold the power button for 15 seconds to drain residual ch... |  |
-| 4 | Remove the bottom cover screws into a parts tray, laying them out i... |  |
-| 5 | Locate and photograph each field-replaceable unit: battery, SODIMM ... |  |
-| 6 | Disconnect the internal battery connector FIRST — before any other ... |  |
-| 7 | Record for each FRU in your inventory table: component name, form f... |  |
-| 8 | Note the two antenna leads on the wireless card and which is main a... |  |
-| 9 | Reassemble in exact reverse order, reconnecting the internal batter... |  |
-| 10 | Write a replacement runbook for one FRU of your choice with numbere... |  |
+| 1 | Put on the anti-static strap and clip it to an unpainted metal point on the chassis. Confirm the mat is earthed before you touch any component. |  |
+| 2 | Shut the laptop down completely — not sleep or hibernate — then disconnect the AC adapter and remove the external battery if the model has one. |  |
+| 3 | Press and hold the power button for 15 seconds to drain residual charge from the capacitors before opening the case. |  |
+| 4 | Remove the bottom cover screws into a parts tray, laying them out in the same pattern as the chassis so each screw returns to its own hole. |  |
+| 5 | Locate and photograph each field-replaceable unit: battery, SODIMM slots, M.2 or 2.5-inch storage, wireless card, cooling fan and keyboard ribbon connector. |  |
+| 6 | Disconnect the internal battery connector FIRST — before any other component — so the board is fully de-energised for the rest of the work. |  |
+| 7 | Record for each FRU in your inventory table: component name, form factor, connector or socket type, removal order position, and the specific ESD or safety risk. |  |
+| 8 | Note the two antenna leads on the wireless card and which is main and which is auxiliary, then photograph their routing before disturbing them. |  |
+| 9 | Reassemble in exact reverse order, reconnecting the internal battery connector LAST, and confirm every screw is returned to its original hole. |  |
+| 10 | Write a replacement runbook for one FRU of your choice with numbered steps, required tools, ESD precautions and a post-replacement verification test. |  |
 
 ## Verification
 
